@@ -173,5 +173,3 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-mysite/mysite/settings.py
-mysite/mysite/settings.py
