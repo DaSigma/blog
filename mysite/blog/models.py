@@ -46,12 +46,13 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
+        published_localtime = timezone.localtime(self.publish)
         return reverse(
             "blog:post_detail",
             args=[
-                self.publish.year,
-                self.publish.month,
-                self.publish.day,
+                published_localtime.year,
+                published_localtime.month,
+                published_localtime.day,
                 self.slug,
             ],
         )
